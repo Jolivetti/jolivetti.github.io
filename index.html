@@ -7,21 +7,22 @@
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         :root {
-            --bg-base: #0b0d10;
-            --bg-surface: #12161f;
-            --bg-card: rgba(18, 22, 31, 0.75);
-            --border-color: rgba(255, 255, 255, 0.1);
-            --border-hover: rgba(226, 232, 240, 0.4);
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --accent-silver: #e2e8f0;
-            --accent-metallic: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #64748b 100%);
-            --accent-glow: rgba(226, 232, 240, 0.15);
+            --bg-base: #0a0e17;
+            --bg-surface: #111827;
+            --bg-card: rgba(17, 24, 39, 0.7);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(59, 130, 246, 0.5);
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --accent-primary: #2563eb;
+            --accent-secondary: #3b82f6;
+            --accent-glow: rgba(59, 130, 246, 0.25);
+            --accent-gradient: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
             --font-stack: 'Inter', system-ui, -apple-system, sans-serif;
             --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -50,7 +51,7 @@
             top: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(11, 13, 16, 0.9);
+            background: rgba(10, 14, 23, 0.85);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--border-color);
             padding: 1rem 2rem;
@@ -60,24 +61,18 @@
         }
 
         .nav-logo {
-            font-size: 1.35rem;
-            font-weight: 800;
-            letter-spacing: 0.05em;
-            color: #94a3b8;
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #fff;
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 0.6rem;
-            text-transform: uppercase;
+            gap: 0.5rem;
         }
 
         .nav-logo span {
-            background: var(--accent-metallic);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 900;
-            letter-spacing: 0.08em;
-            text-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+            color: var(--accent-secondary);
         }
 
         .nav-links {
@@ -95,7 +90,7 @@
         }
 
         .nav-links a:hover {
-            color: var(--accent-silver);
+            color: var(--accent-secondary);
         }
 
         /* Container Layout */
@@ -116,7 +111,7 @@
             align-items: center;
             padding-top: 5rem;
             position: relative;
-            background: radial-gradient(circle at 50% 20%, rgba(226, 232, 240, 0.05) 0%, rgba(11, 13, 16, 0) 70%);
+            background: radial-gradient(circle at 50% 20%, rgba(37, 99, 235, 0.12) 0%, rgba(10, 14, 23, 0) 70%);
         }
 
         .hero-content {
@@ -127,19 +122,18 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            padding: 0.4rem 0.95rem;
+            padding: 0.35rem 0.85rem;
             border-radius: 9999px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--border-color);
-            color: var(--accent-silver);
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            color: var(--accent-secondary);
             font-size: 0.825rem;
             font-weight: 600;
             margin-bottom: 1.5rem;
-            letter-spacing: 0.02em;
         }
 
         .hero-title {
-            font-size: clamp(2.5rem, 5vw, 4.2rem);
+            font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 800;
             line-height: 1.1;
             letter-spacing: -0.03em;
@@ -147,7 +141,7 @@
         }
 
         .hero-title span {
-            background: var(--accent-metallic);
+            background: linear-gradient(135deg, #ffffff 0%, #9ca3af 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -180,26 +174,25 @@
         }
 
         .btn-primary {
-            background: #f8fafc;
-            color: #0b0d10;
+            background: var(--accent-gradient);
+            color: #fff;
             box-shadow: 0 4px 14px var(--accent-glow);
         }
 
         .btn-primary:hover {
-            background: #e2e8f0;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
         }
 
         .btn-secondary {
-            background: rgba(255, 255, 255, 0.04);
+            background: rgba(255, 255, 255, 0.05);
             color: var(--text-main);
             border: 1px solid var(--border-color);
         }
 
         .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.08);
-            border-color: var(--border-hover);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
             transform: translateY(-2px);
         }
 
@@ -222,9 +215,7 @@
         .stat-number {
             font-size: 2.25rem;
             font-weight: 800;
-            background: var(--accent-metallic);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--accent-secondary);
             margin-bottom: 0.25rem;
         }
 
@@ -275,12 +266,11 @@
             width: 48px;
             height: 48px;
             border-radius: 10px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--border-color);
+            background: rgba(59, 130, 246, 0.1);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--accent-silver);
+            color: var(--accent-secondary);
             font-size: 1.25rem;
             margin-bottom: 1.25rem;
         }
@@ -318,9 +308,9 @@
         }
 
         .filter-btn.active, .filter-btn:hover {
-            background: #f8fafc;
-            color: #0b0d10;
-            border-color: #f8fafc;
+            background: var(--accent-secondary);
+            color: #fff;
+            border-color: var(--accent-secondary);
         }
 
         .projects-grid {
@@ -355,7 +345,7 @@
             font-size: 0.75rem;
             padding: 0.2rem 0.6rem;
             border-radius: 4px;
-            background: rgba(255, 255, 255, 0.04);
+            background: rgba(255, 255, 255, 0.05);
             color: var(--text-muted);
             border: 1px solid var(--border-color);
         }
@@ -366,7 +356,7 @@
             position: fixed;
             inset: 0;
             z-index: 2000;
-            background: rgba(0, 0, 0, 0.85);
+            background: rgba(0, 0, 0, 0.8);
             backdrop-filter: blur(8px);
             align-items: center;
             justify-content: center;
@@ -428,8 +418,8 @@
         }
 
         .contact-item:hover {
-            border-color: var(--border-hover);
-            color: var(--accent-silver);
+            border-color: var(--accent-secondary);
+            color: var(--accent-secondary);
         }
 
         footer {
@@ -451,10 +441,7 @@
 
     <!-- Header Navigation -->
     <nav class="navbar">
-        <a href="#" class="nav-logo">
-            <i class="fa-solid fa-infinity" style="color: var(--accent-silver); font-size: 1.1rem;"></i>
-            Jonathan <span>OLIVETTI</span>
-        </a>
+        <a href="#" class="nav-logo">Jonathan <span>Olivetti</span></a>
         <ul class="nav-links">
             <li><a href="#about">Overview</a></li>
             <li><a href="#domains">Core Domains</a></li>
