@@ -82,6 +82,7 @@
 
         .nav-links {
             display: flex;
+            align-items: center;
             gap: 2rem;
             list-style: none;
         }
@@ -96,6 +97,26 @@
 
         .nav-links a:hover {
             color: var(--accent-secondary);
+        }
+
+        .nav-linkedin-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.4rem 0.85rem;
+            border-radius: 6px;
+            background: rgba(10, 102, 194, 0.15);
+            border: 1px solid rgba(10, 102, 194, 0.4);
+            color: #0a66c2 !important;
+            font-weight: 600 !important;
+            font-size: 0.85rem !important;
+            transition: var(--transition-smooth);
+        }
+
+        .nav-linkedin-btn:hover {
+            background: #0a66c2 !important;
+            color: #ffffff !important;
+            border-color: #0a66c2 !important;
         }
 
         /* Container Layout */
@@ -403,7 +424,7 @@
         .contact-methods {
             display: flex;
             justify-content: center;
-            gap: 2rem;
+            gap: 1.5rem;
             margin-top: 2rem;
             flex-wrap: wrap;
         }
@@ -455,6 +476,11 @@
             <li><a href="#domains">Core Domains</a></li>
             <li><a href="#initiatives">Key Initiatives</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li>
+                <a href="https://www.linkedin.com/in/jonolivetti" target="_blank" class="nav-linkedin-btn">
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+                </a>
+            </li>
         </ul>
     </nav>
 
@@ -628,6 +654,9 @@
                         Available for executive stakeholder alignment, strategic technology advisement, and digital transformation initiatives.
                     </p>
                     <div class="contact-methods">
+                        <a href="https://www.linkedin.com/in/jonolivetti" target="_blank" class="contact-item">
+                            <i class="fa-brands fa-linkedin" style="color: #0a66c2;"></i> LinkedIn Profile
+                        </a>
                         <a href="mailto:jolivetti2016@gmail.com" class="contact-item">
                             <i class="fa-regular fa-envelope"></i> jolivetti2016@gmail.com
                         </a>
