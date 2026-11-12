@@ -70,10 +70,16 @@
             white-space: nowrap;
         }
 
-        .nav-logo img {
-            height: 38px;
-            width: auto;
-            object-fit: contain;
+        .nav-logo .first-name {
+            color: var(--accent-secondary);
+            font-weight: 600;
+        }
+
+        .nav-logo .last-name {
+            color: #ffffff;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
         }
 
         .nav-links {
@@ -452,12 +458,31 @@
             color: var(--accent-secondary);
         }
 
+        /* Footer Logo Showcase */
         footer {
             border-top: 1px solid var(--border-color);
-            padding: 2rem 0;
+            padding: 3rem 0 2rem 0;
             text-align: center;
             color: var(--text-muted);
             font-size: 0.85rem;
+        }
+
+        .footer-logo-container {
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer-logo-container img {
+            max-width: 220px;
+            height: auto;
+            opacity: 0.9;
+            transition: var(--transition-smooth);
+        }
+
+        .footer-logo-container img:hover {
+            opacity: 1;
         }
 
         /* --- Comprehensive Mobile & Tablet Adaptability --- */
@@ -529,10 +554,11 @@
 </head>
 <body>
 
-    <!-- Header Navigation with Logo.png -->
+    <!-- Header Navigation (Name restored to top-left) -->
     <nav class="navbar">
         <a href="#" class="nav-logo">
-            <img src="Logo.png" alt="The Olivetti Group LLC">
+            <span class="first-name">Jonathan</span>
+            <span class="last-name">OLIVETTI</span>
         </a>
         <ul class="nav-links">
             <li><a href="#about">Overview</a></li>
@@ -765,8 +791,12 @@
         </div>
     </div>
 
+    <!-- Footer with Logo Centered at Bottom -->
     <footer>
         <div class="container">
+            <div class="footer-logo-container">
+                <img src="Logo.png" alt="The Olivetti Group LLC">
+            </div>
             <p>&copy; 2026 Jonathan Olivetti / The Olivetti Group LLC. All rights reserved.</p>
         </div>
     </footer>
