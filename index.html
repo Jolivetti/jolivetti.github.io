@@ -554,7 +554,7 @@
 </head>
 <body>
 
-    <!-- Header Navigation (Name restored to top-left) -->
+    <!-- Header Navigation -->
     <nav class="navbar">
         <a href="#" class="nav-logo">
             <span class="first-name">Jonathan</span>
@@ -730,6 +730,21 @@
                             View Case Details
                         </button>
                     </div>
+
+                    <div class="project-card" data-category="development">
+                        <div>
+                            <h3>Legal CRM & Intake Management Prototype</h3>
+                            <div class="project-tags">
+                                <span class="tag">Django</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Case Intake</span>
+                            </div>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">Engineered a secure legal CRM platform streamlining client onboarding, document administration, and case tracking workflows.</p>
+                        </div>
+                        <button class="btn btn-secondary" style="margin-top: 1.5rem; width: 100%; justify-content: center;" onclick="openModal('modal-4')">
+                            View Case Details
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -788,6 +803,18 @@
                 Led full product lifecycle overhaul converting legacy PHP infrastructure into an agile Progressive Web Application. Implemented offline caching capabilities and integrated messaging modules to optimize connectivity for operators in the field.
             </p>
             <button class="btn btn-primary" onclick="closeModal('modal-3')">Close Overview</button>
+        </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div class="modal" id="modal-4">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal('modal-4')">&times;</button>
+            <h3 style="font-size: 1.35rem; margin-bottom: 1rem;">Legal CRM & Intake Management Prototype</h3>
+            <p style="color: var(--text-muted); margin-bottom: 1.25rem;">
+                Engineered a secure Django-based legal CRM system designed for streamlined client intake, case tracking, and document administration. Built with robust backend architecture and customized workflows to support legal consultation and claims operations.
+            </p>
+            <button class="btn btn-primary" onclick="closeModal('modal-4')">Close Overview</button>
         </div>
     </div>
 
