@@ -70,16 +70,10 @@
             white-space: nowrap;
         }
 
-        .nav-logo .first-name {
-            color: var(--accent-secondary);
-            font-weight: 600;
-        }
-
-        .nav-logo .last-name {
-            color: #ffffff;
-            font-weight: 800;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
+        .nav-logo img {
+            height: 38px;
+            width: auto;
+            object-fit: contain;
         }
 
         .nav-links {
@@ -535,11 +529,10 @@
 </head>
 <body>
 
-    <!-- Header Navigation -->
+    <!-- Header Navigation with Logo -->
     <nav class="navbar">
         <a href="#" class="nav-logo">
-            <span class="first-name">Jonathan</span>
-            <span class="last-name">OLIVETTI</span>
+            <img src="logo.png" alt="The Olivetti Group LLC">
         </a>
         <ul class="nav-links">
             <li><a href="#about">Overview</a></li>
@@ -774,7 +767,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Jonathan Olivetti. All rights reserved.</p>
+            <p>&copy; 2026 Jonathan Olivetti / The Olivetti Group LLC. All rights reserved.</p>
         </div>
     </footer>
 
